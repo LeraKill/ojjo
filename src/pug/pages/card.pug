@@ -1,0 +1,79 @@
+extends ../layout
+
+block variables
+	- var title = 'OJJO Catalog';
+
+block content 
+	section.page__breadcrumbs.breadcrumbs  
+		.breadcrumbs__container.__container
+			.breadcrumbs__content 
+				ol.breadcrumbs__list(itemscope='' itemtype='https://schema.org/BreadcrumbList')
+					li.breadcrumbs__item(itemprop='itemListElement' itemscope='' itemtype='https://schema.org/ListItem')
+						a.breadcrumbs__link(itemprop='item' href='index.html')
+							span(itemprop='name') Главная
+						meta(itemprop='position' content='1')
+					li.breadcrumbs__item(itemprop='itemListElement' itemscope='' itemtype='https://schema.org/ListItem')
+						a.breadcrumbs__link(itemprop='item' href='catalog.html')
+							span(itemprop='name') Каталог
+						meta(itemprop='position' content='2')
+					li.breadcrumbs__item(itemprop='itemListElement' itemscope='' itemtype='https://schema.org/ListItem')
+						a.breadcrumbs__link(itemprop='item' href='catalog.html')
+							span(itemprop='name') Категория
+						meta(itemprop='position' content='2')
+					li.breadcrumbs__item(itemprop='itemListElement' itemscope='' itemtype='https://schema.org/ListItem')
+						span(itemprop='name') Кольцо Click on Me
+						meta(itemprop='item' content='card.html')
+						meta(itemprop='position' content='4')
+	section.page__card.card
+		.card__container.__container 
+			.card__body
+				.card__column
+					.card__item
+						#carousel.carosuel
+							.carousel__inner
+								.carousel__item._ibg._big
+									+img('card/card-img2.jpeg')
+								.carousel__item._ibg
+									+img('card/card-img1.jpeg')
+								.carousel__item._ibg
+									+img('card/card-img3.jpeg')
+								.carousel__item._ibg
+									+img('card/card-img4.jpeg')
+				.card__column 
+					.card__item.item-card
+						.item-card__wrapper
+							.item-card__content
+								.item-card__title Кольцо Click on Me
+								.item-card__categories
+									.item-card__category
+										span.item-card-category Категория:
+										span.item-card-category-name Кольца
+									.item-card__category
+										span.item-card-category Бренд:
+										span.item-card-category-name Click on Me
+								.item-card__text 
+									|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit mattis scelerisque odio nunc. Ipsum quis facilisis turpis vulputate. Viverra dignissim in nec phasellus. Tincidunt est ipsum diam, vestibulum dignissim dui diam. Et nulla sit convallis orci est, fames sit luctus lacus. Nunc donec malesuada amet eget eget pharetra. Ultricies et, ac varius at amet viverra feugiat non massa.Vel vel in urna, sodales urna ac sed felis. Tellus augue et senectus malesuada faucibus sollicitudin ornare. Sit non et sit enim in ornare velit. Ac imperdiet vitae, orci, nec scelerisque enim sit enim risus. Et nulla sit convallis orci est, fames sit luctus lacus. 
+								.item-card__price 
+									|	200 000 ₽ 
+								.item-card__buttons 
+									.item-card__button 
+										a.item-card__link.item-card__link-buy(href='#') Купить
+									.item-card__button 
+										a.item-card__link.item-card__link-add(href='#') Добавить в корзину
+	+card-block('Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex labore aliquid ipsam sed aut aliquam fugit, vero provident corporis quae totam tempora repellendus corrupti aspernatur! Itaque officia est dolores error! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex labore aliquid ipsam sed aut aliquam fugit, vero provident corporis quae totam tempora repellendus corrupti aspernatur! Itaque officia est dolores error! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex labore aliquid ipsam sed aut aliquam fugit, vero provident corporis quae totam tempora repellendus corrupti aspernatur! Itaque officia est dolores error! Lorem ipsum, dolor sit amet consectetur adipisicing elit.')
+		h2.card__title Полное описание товара
+	section.page__variants.variants
+		.variants__container.__container
+			+headerBlock('variants__header', 'variants__subtitle', 'Мы подготовили для вас кое-что еще', 'variants__title', 'Товары, которые могут Вам понравиться')
+			.variants__assortment.assortment 
+				.assortment__body 
+					+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+						+lazyImg('assortment/assortment-img.png')
+					+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+						+lazyImg('assortment/assortment-img.png')
+					+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+						+lazyImg('assortment/assortment-img.png')
+	+mailing
+
+									
+

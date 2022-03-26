@@ -1,0 +1,33 @@
+mixin card-block(text)
+	section.page__advantages.advantages
+		.advantages__container 
+			.advantages__body 
+				.advantages__column-one 
+					.advantages__text.limited
+						block
+						p= text 
+						.bottom
+					.advantages__link-reading
+						a.link-read-more.show-more(href='#')
+				.advantages__column-two
+					.advantages__content 
+						.advantages__item.item-advantages
+							.item-advantages__img._ibg
+								+img('advantages/delivery.png', 'Delivery')
+							.item-advantages__text 
+								p Бесплатная доставка
+						.advantages__item.item-advantages
+							.item-advantages__img._ibg 
+								+img('advantages/list.png', 'Delivery')
+							.item-advantages__text 
+								p Индивидуальный дизайн
+						.advantages__item.item-advantages
+							.item-advantages__img._ibg 
+								+img('advantages/ribbon-design.png', 'Delivery')
+							.item-advantages__text 
+								p Бесплатная примерка
+						.advantages__item.item-advantages
+							.item-advantages__img._ibg 
+								+img('advantages/jewelry.png', 'Delivery')
+							.item-advantages__text 
+								p Личный подход

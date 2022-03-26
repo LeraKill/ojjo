@@ -1,0 +1,29 @@
+mixin popupReg 
+	#popup_3.popup__reg.popup 
+		.popup__body 
+			.popup__content.popup__reg-content 
+				a.popup__close.close-popup(href='#')
+					span.icon-close
+				.popup__info 
+					h2.popup__title Регистрация
+				.form-wrapper
+					.sending-error 
+					form#form4.popup__form.form(action='#', method='POST')
+						.popup__form-group.form__group
+							input._req._name(type='text' name='name' placeholder='Username')
+						.popup__form-group.form__group
+							input._req._email(type='text' name='email' placeholder='E-mail')
+						.popup__form-group.form__group
+							input._req._password(type='password' name='password' placeholder='Введите пароль')
+						.popup__form-group.form__group
+							input._req._password-1(type='password' name='password' placeholder='Повторите пароль')
+						.popup__form-group-checkbox
+							label
+								input.checkbox._req(id='checkbox' type='checkbox' name='agreement' checked) 
+								| Я даю согласие на обработку моих 
+								a(href='#') персональных данных
+						.popup__button.block-button 
+							input.popup__button-submit.popup__button-submit-reg.block-link(type='Submit' value='Зарегистрироваться')
+					.popup__block
+						span Уже зарегистрированы?
+						a.popup__link.popup__open(href='#popup') Войти

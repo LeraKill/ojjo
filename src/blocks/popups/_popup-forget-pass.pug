@@ -1,0 +1,19 @@
+mixin popupForgetPass 
+	#popup_2.popup__forget-pass.popup 
+		.popup__body 
+			.popup__content.popup__forget-pass-content
+				a.popup__close.close-popup(href='#')
+					span.icon-close
+				.popup__info
+					h2.popup__title Восстановление пароля
+					p.popup__text На ваш email адрес будет отправлена ссылка для восстановления пароля.
+				.form-wrapper
+					.sending-error 
+					form#form3.popup__form.form(action='#' method='POST')
+						.popup__form-group.form__group 
+							input._req._email(type='text' name='email' placeholder='E-mail') 
+						.popup__button.block-button 
+							input.popup__button-submit.block-link(type='Submit' value='Отправить')
+					.popup__block
+						span Вспомнили пароль?
+						a.popup__link.popup__open(href='#popup') Войти

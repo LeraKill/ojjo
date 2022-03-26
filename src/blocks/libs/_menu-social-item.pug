@@ -1,0 +1,8 @@
+mixin menuSocialItem(classLi, classLink, classSpan, href='#')
+	li(class=classLi)
+		a(class=classLink)(href=`${href}`)
+			span(class=classSpan)
+
+mixin item(classLi, classLink, text, href='#')
+	li(class=classLi)
+		a(class=classLink)(href=`${href}`)= text

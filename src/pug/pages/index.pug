@@ -1,0 +1,112 @@
+extends ../layout
+
+block variables
+	- var title = 'OJJO';
+
+block content
+	section.page__description.description
+		.description__container.__container
+			.description__body
+				h1.description__title Долго, дорого, богато
+				+buttonBlock('description__button', 'description__link', 'Каталог изделий', 'catalog.html')
+			.description__cover._ibg
+				+img('description/bgc.jpg', 'Cover')
+	section.page__brands.brands 
+		.brands__container.__container 
+			.brands__body
+				+flexItemDescription('brands__column', 'brands__item')
+					+img('brands/brand-item.png', 'Brand Name')
+				+flexItemDescription('brands__column', 'brands__item')
+					+img('brands/brand-item.png', 'Brand Name')
+				+flexItemDescription('brands__column', 'brands__item')
+					+img('brands/brand-item.png', 'Brand Name')
+				+flexItemDescription('brands__column', 'brands__item')
+					+img('brands/brand-item.png', 'Brand Name')
+				+flexItemDescription('brands__column', 'brands__item')
+					+img('brands/brand-item.png', 'Brand Name')
+				+flexItemDescription('brands__column', 'brands__item')
+					+img('brands/brand-item.png', 'Brand Name')
+	section.page__catalog.catalog 
+		.catalog__container.__container
+			+headerBlock('catalog__header', 'catalog__subtitle', 'К мероприятиям', 'catalog__title', 'Настоящая красота здесь!')
+			.catalog__categories.categories
+				+flexItemDescription('categories__column', 'categories__item')
+					.categories__link-block
+						a.categories__link(href="#") Свадьба
+						.categories__link-second-frame
+				+flexItemDescription('categories__column', 'categories__item')
+					.categories__link-block
+						a.categories__link(href="#") Мужу
+						.categories__link-second-frame
+				+flexItemDescription('categories__column', 'categories__item')
+					.categories__link-block
+						a.categories__link(href="#") Жене
+						.categories__link-second-frame
+				+flexItemDescription('categories__column', 'categories__item')
+					.categories__link-block
+						a.categories__link(href="#") Партнеру
+						.categories__link-second-frame
+				+flexItemDescription('categories__column', 'categories__item')
+					.categories__link-block
+						a.categories__link(href="#") Коллекции
+						.categories__link-second-frame
+				+flexItemDescription('categories__column', 'categories__item')
+					.categories__link-block
+						a.categories__link(href="#") Редкость
+						.categories__link-second-frame
+			.catalog__cards.cards
+				.cards__body
+					+flexItem('cards__column', 'cards__item', 'cards__img','cards__title', 'cards__title-link', 'Кольца')
+						+img('catalog/rings.png', 'Rings')
+					+flexItem('cards__column', 'cards__item', 'cards__img','cards__title', 'cards__title-link', 'Серьги')
+						+img('catalog/earrings.png', 'Earrings')
+					+flexItem('cards__column', 'cards__item', 'cards__img','cards__title', 'cards__title-link', 'Подвески')
+						+img('catalog/pendants.png', 'Pendants')
+					+flexItem('cards__column', 'cards__item', 'cards__img','cards__title', 'cards__title-link', 'Запонки')
+						+img('catalog/cufflinks.png', 'Cufflinks')
+					+flexItem('cards__column', 'cards__item', 'cards__img','cards__title', 'cards__title-link', 'Браслеты')
+						+img('catalog/bracelets.png', 'Bracelets')
+					+flexItem('cards__column', 'cards__item', 'cards__img','cards__title', 'cards__title-link', 'Часы')
+						+img('catalog/watches.png', 'Watches')
+	section.page__salons.salons 
+		.salons__container.__container 
+			+headerBlock('salons__header', 'salons__subtitle', 'Не знаете, что выбрать?', 'salons__title', 'Посетите наши салоны в Москве')
+			.salons__info 
+				p.salons__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut duis tortor vitae pellentesque egestas quam pulvinar. Pellentesque porttitor velit sit pellentesque. Suspendisse donec pretium id dignissim. Dignissim ultrices eget orci viverra. Egestas quis et ut ultrices imperdiet lectus nulla tempus. Pharetra lorem sem purus nisi libero viverra ipsum.
+				+buttonBlock('salons__button', 'salons__link', 'Наши салоны', 'contacts.html')
+				.salons__cover.block-cover
+					+img('salons/background-block.png')
+	section.page__articles.articles 
+		.articles__container.__container 
+			+headerBlock('articles__header', 'articles__subtitle', 'Полезные статьи', 'articles__title', 'Лучшие советы по подбору дорогих подарков')
+			.articles__body 
+				+flexItem('articles__column', 'articles__item', 'articles__img','articles__item__title', 'articles__item__title-link', 'Как выбрать часы для своей будущей жены')
+					+img('articles/articleOne.png')
+				+flexItem('articles__column', 'articles__item', 'articles__img','articles__item__title', 'articles__item__title-link', 'Запонки для мужа: 7 ключевых правил покупки аксессуара')
+					+img('articles/articleTwo.png')
+				+flexItem('articles__column', 'articles__item', 'articles__img','articles__item__title', 'articles__item__title-link', 'Как выбрать обручальные кольца молодоженам')
+					+img('articles/articleThree.png')
+			+buttonBlock('articles__button', 'articles__link', 'Читать наш блог')
+	section.page__social.social
+		.social__container.__container
+			+headerBlock('social__header', 'social__subtitle', '#ojjo_jewerly', 'social__title', 'Мы в социальных сетях')
+			.social__body 
+				.social__column.social__column--1
+					a.social__link.loading(href='#')
+						iframe(width='555' height='300' data-src='https://www.youtube.com/embed/ZvHipLQapVo' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+				.social__column.social__column--2
+					a.social__link.loading(href='#')
+						+lazyImg('social/social2.png')
+				.social__column.social__column--3
+					a.social__link.loading(href='#')
+						+lazyImg('social/social3.png')
+				.social__column.social__column--4
+					a.social__link.loading(href='#')
+						+lazyImg('social/social4.png')
+				.social__column.social__column--5
+					a.social__link.loading(href='#')
+						+lazyImg('social/social5.png')
+				.social__column.social__column--6
+					a.social__link.loading(href='#')
+						+lazyImg('social/social6.png')
+	+mailing

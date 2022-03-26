@@ -1,0 +1,60 @@
+mixin footer 
+	footer.footer 
+		.footer__container.__container 
+			.footer__first 
+				.footer__column
+					.footer__item.item-footer 
+						h2.item-footer-title Полезные ссылки
+						.item-footer-content.content 
+							ul.content__list 
+								+navItem('content__item', 'content__link', 'Доставка')
+								+navItem('content__item', 'content__link', 'Оплата')
+								+navItem('content__item', 'content__link', 'Акции')
+								+navItem('content__item', 'content__link', 'Политика конфиденциальности')
+				.footer__column 
+					.footer__item.item-footer 
+						h2.item-footer-title Оплата
+						.item-footer-content.content 
+							p.content__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper justo, nec, pellentesque.
+							.content__payment.payment 
+								a.payment__link(href='#')
+									+img('footer/visa.png', 'Visa')
+								a.payment__link(href='#')
+									+img('footer/mastercard.png', 'Mastercard')
+				.footer__column 
+					.footer__item.item-footer 
+						h2.item-footer-title Контакты
+						.item-footer-content.content 
+							ul.content__list 
+								.content__list-item 
+									span.icon-old-phone
+									+navItem('content__item', 'content__link', '8 (812) 234-56-55', 'tel:+78122345655')
+								.content__list-item
+									span.icon-old-phone
+									+navItem('content__item', 'content__link', '8 (812) 234-56-53', 'tel:+78122345653')
+								.content__list-item
+									span.icon-mail
+									+navItem('content__item', 'content__link', 'ojjo@ojjo.ru', 'mailto:ojjo@ojjo.ru')
+				.footer__column 
+					.footer__item.item-footer 
+						h2.item-footer-title Социальные сети
+						.item-footer-content.content 
+							p.content__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper justo, nec, pellentesque.
+						.content__social 
+							ul.content__social-list 
+								+menuSocialItem('content__social-item', 'menu__social-link', 'content__social-icon icon-youtube')
+								+menuSocialItem('content__social-item', 'menu__social-link', 'content__social-icon icon-vk')
+								+menuSocialItem('content__social-item', 'menu__social-link', 'content__social-icon icon-facebook')
+								+menuSocialItem('content__social-item', 'menu__social-link', 'content__social-icon icon-telegram')
+								+menuSocialItem('content__social-item', 'menu__social-link', 'content__social-icon icon-etsy')
+			.footer__second 
+				ul.footer__second-list 
+					+item('footer__second-item', 'footer__second-link', '(c) 2020 OJJO jewelry')
+					+item('footer__second-item', 'footer__second-link', 'Договор публичной оферты')
+					+item('footer__second-item', 'footer__second-link', 'Контрагентам')
+
+
+
+
+
+

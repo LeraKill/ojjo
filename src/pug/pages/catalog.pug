@@ -1,0 +1,58 @@
+extends ../layout
+
+block variables
+	- var title = 'OJJO Catalog';
+
+block content 
+	section.page__select.select
+		.select__container.__container
+			.select__body 
+				.select__column
+					+selectList('Бренд', 'Brand One', 'Brand Two', 'Brand Three', 'Brand Four')
+				.select__column
+					+selectList('Цена', 'до 30 000', '30 000 - 100 000', '100 000 - 200 000', 'от 200 000')
+				.select__column
+					+selectList('Для кого', 'Жене', 'Мужу', 'Партнеру', 'Сестре', 'Маме')
+				.select__column
+					+selectList('Категория', 'Кольца', 'Браслеты', 'Подвески', 'Серьги', 'Запонки', 'Часы')
+				.select__column
+					+selectList('Сезон', 'весна-лето 2021', 'осень-зима 2021', 'весна-лето 2020')
+				.select__column
+					+selectList('Событие', 'Свадьба', 'Венчание', 'День рождения', 'Годовщина')
+	section.page__assortment.assortment
+		.assortment__container.__container
+			.assortment__body 
+				+assortmentFlexItem('Кольцо','Click on Me', '200 000 ₽', 'card.html')
+					+lazyImg('card/card-img2.jpeg')
+				+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+					+lazyImg('assortment/assortment-img.png')
+				+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+					+lazyImg('assortment/assortment-img.png')
+				+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+					+lazyImg('assortment/assortment-img.png')
+				+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+					+lazyImg('assortment/assortment-img.png')
+				+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+					+lazyImg('assortment/assortment-img.png')
+			.assortment__body.limited
+				+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+					+lazyImg('assortment/assortment-img.png')
+				+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+					+lazyImg('assortment/assortment-img.png')
+				+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+					+lazyImg('assortment/assortment-img.png')
+				+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+					+lazyImg('assortment/assortment-img.png')
+				+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+					+lazyImg('assortment/assortment-img.png')
+				+assortmentFlexItem('Подвеска','Dolce & Gabanna', '175 000 ₽')
+					+lazyImg('assortment/assortment-img.png')
+				.bottom
+			+buttonBlock('assortment__button', 'assortment__link show-more', '')
+	+card-block('Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex labore aliquid ipsam sed aut aliquam fugit, vero provident corporis quae totam tempora repellendus corrupti aspernatur! Itaque officia est dolores error! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex labore aliquid ipsam sed aut aliquam fugit, vero provident corporis quae totam tempora repellendus corrupti aspernatur! Itaque officia est dolores error! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex labore aliquid ipsam sed aut aliquam fugit, vero provident corporis quae totam tempora repellendus corrupti aspernatur! Itaque officia est dolores error! Lorem ipsum, dolor sit amet consectetur adipisicing elit. ')
+	+mailing
+
+
+
+
+			

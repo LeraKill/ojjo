@@ -1,0 +1,29 @@
+mixin flexItemDescription(classColumn,classItem)
+	div(class=classColumn)
+		div(class=classItem)
+			block
+
+
+
+
+mixin flexItem(classColumn,classItem,classImage, classText, classLink, Text, href='#')
+	div(class=classColumn)
+		div(class=classItem)
+			div._ibg(class=classImage)
+				block
+			div(class= classText)
+				a(class=classLink)(href=`${href}`)= Text
+
+
+mixin assortmentFlexItem(subtitle, title, text, href='#')
+	.assortment__column 
+		.assortment__item
+			.assortment__img._ibg
+				a.assortment__img-link.loading(href=`${href}`) 
+					block 
+			.assortment__info 
+				p.assortment__subtitle= subtitle
+				p.assortment__title= title
+				a.assortment__btn(href=`${href}`)= text
+			
+	

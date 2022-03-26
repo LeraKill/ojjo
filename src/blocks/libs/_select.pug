@@ -1,0 +1,7 @@
+mixin selectList(buttonValue, ...items)
+	.dropdown 
+		button.dropdown__button= buttonValue
+		ul.dropdown__list
+			each item in items 
+				li.dropdown__list-item(data-value= item)= item
+		input.dropdown__input-hidden(type='text', name='select-input', value='')

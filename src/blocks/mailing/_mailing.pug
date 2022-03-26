@@ -1,0 +1,20 @@
+mixin mailing 
+	section.page__mailing.mailing 
+		.mailing__container.__container 
+			+headerBlock('mailing__header', 'mailing__subtitle', 'Полезные советы и персональные предложения', 'mailing__title', 'Эксклюзивная рассылка')
+			.mailing__body
+				+flexItemDescription('mailing__column', 'mailing__item item-mailing')
+					ul.item-mailing__list.mailing-list
+						li.mailing-list__item Личный менеджер
+						li.mailing-list__item Доставка и оформление
+						li.mailing-list__item Индивидуальный дизайн
+				+flexItemDescription('mailing__column', 'mailing__item item-mailing')
+					.item-mailing__form-container.form-wrapper
+						.sending-error
+						form#form1.item-mailing__form.form(action='' method='POST')
+							.form__group 
+								input#email._req._email(type='text' name='email' placeholder='Ваш e-mail')
+							.block-button 
+								input.block-link.submit-button(type='Submit' value='Отправить')
+			.mailing__cover
+				+img('salons/background-block.png')

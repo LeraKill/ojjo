@@ -1,0 +1,27 @@
+mixin header 
+	header.header 
+		.header__container.__container
+			a.header__logo(href='index.html')
+				+img('logo.svg', 'Logo')
+			.header__menu.menu
+				.menu__icon 
+					span
+				nav.menu__body
+					ul.menu__list 
+						+navItem('menu__item', 'menu__link', 'Контрагентам')
+						+navItem('menu__item', 'menu__link', 'Дизайнерам')
+						+navItem('menu__item', 'menu__link', 'Вакансии')
+						+navItem('menu__item', 'menu__link', 'Контакты', 'contacts.html')
+						+navItem('menu__item', 'menu__link popup__open', 'Вход/Регистрация', '#popup')
+						li.menu__item 
+							a.menu__link.popup__open(href="#popup")
+								span.icon-account.icon 
+							a.menu__link(href="#")
+								span.icon-like.icon
+						.menu__social 
+							ul.menu__social-list 
+								+menuSocialItem('menu__social-item', 'menu__social-link','social-icon icon-youtube')
+								+menuSocialItem('menu__social-item', 'menu__social-link','social-icon icon-vk')
+								+menuSocialItem('menu__social-item', 'menu__social-link','social-icon icon-facebook')
+								+menuSocialItem('menu__social-item', 'menu__social-link','social-icon icon-telegram')
+								+menuSocialItem('menu__social-item', 'menu__social-link','social-icon icon-etsy')

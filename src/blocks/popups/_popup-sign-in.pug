@@ -1,0 +1,20 @@
+mixin popupSingIn 
+	#popup.popup__sing-in.popup
+		.popup__body 
+			.popup__content 
+				a.popup__close.close-popup(href='#')
+					span.icon-close
+				.form-wrapper
+					.sending-error 
+					form#form2.popup__form.form(action='#', method='POST')
+						.popup__form-group.form__group  
+							label(for='name') Username 
+							input#name._req._name(type='text' name='name' placeholder='username')
+						.popup__form-group.form__group
+							label(for='password') Пароль
+							input#password._req._password(type='password' name='password')
+						.popup__button.block-button 
+							input.popup__button-submit.block-link(type='Submit' value='Войти')
+					.popup__links
+						a.popup__link.popup__open(href='#popup_2') Забыли пароль?
+						a.popup__link.popup__open(href='#popup_3') Зарегистрироваться

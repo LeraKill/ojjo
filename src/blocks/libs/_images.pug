@@ -1,0 +1,5 @@
+mixin img(img, alt='Image')
+	img(src=require(`../../images/${img}`) alt=`${alt}`)
+
+mixin lazyImg(img, alt='Image')
+	img(data-src=require(`../../images/${img}`) alt=`${alt}`)
